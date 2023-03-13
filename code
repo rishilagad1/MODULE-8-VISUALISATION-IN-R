@@ -1,0 +1,47 @@
+Module 9-Visualization in R
+
+This week's module taught me about three different types of Visualization Graphics (Basic Graphics, Lattice Graphics, and ggplot2 Graphics) in R.
+
+
+For this week's assignment, we  create those three types of visualizations on one of the data sets we choose. I chose the data of Gold-silver Price ratio.
+
+I wrote the code and attempted to execute it. After running that code, the expected results are displayed.
+
+The first thing I did was choose my desired dataset and import it into R studio.
+
+> GoldSilver <- read.csv("C:/Users/rushi/Downloads/GoldSilver.csv")
+> View(GoldSilver)
+> x=read.table(file.choose(),header=TRUE,sep=",")
+> plot(x)
+> install.packages("lattice")
+package ‘lattice’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+C:\Users\rushi\AppData\Local\Temp\Rtmp2PDFnm\downloaded_packages
+> library(lattice)
+> xyplot(x)
+# Lattice Graphics
+
+ ggplot2:
+
+> install.packages("ggplot2")
+
+> library(ggplot2)
+
+> ggplot(GoldSilver, aes(x=gold,y=silver))+geom_line()
+
+
+> ggplot(GoldSilver, aes(x=gold,y=silver))+geom_point()
+
+
+
+
+
+
+#Thank YOU....
+
+
+
+
+
+
